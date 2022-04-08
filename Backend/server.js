@@ -43,7 +43,7 @@ const Server= app.listen(PORT, () => {
 const io=require('socket.io')(Server,{ 
   pingTimeout:60000,
   cors:{
-    origin:"https://crapee-talk.herokuapp.com/" 
+    origin:"https://gippme.online" 
   }
 })
  
