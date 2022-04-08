@@ -1,0 +1,11 @@
+var express=require('express')
+var router=express.Router()
+var chatController=require('../Controllers/chatController')
+const {protect}=require('../middleware/authMiddleware')
+router.post('/',protect,chatController.accessChat)
+router.get('/', protect,chatController.fetchChat)
+router.post('/group',protect,chatController.createGrupe)
+router.put('/rename',protect,chatController.renameGroup)
+router.put('/grouperemove',protect,chatController.removeFromGroup)
+router.put('/groupeadd',protect,chatController.addtoGroup)
+module.exports = router
