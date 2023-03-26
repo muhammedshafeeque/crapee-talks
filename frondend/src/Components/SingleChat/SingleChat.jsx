@@ -25,7 +25,7 @@ function SingleChat({ fetchAgain, setFetchAgain }) {
   const { user, selectedChat, setSelectedChat } = ChatState();
   const [socketConnected, setSocketConnected] = useState(false);
   const toast = useToast();
-  const ENDPOINT = "https://gippme.online";
+  const ENDPOINT = "https://chat.muhammedshafeequ.online/";
   
   var socket, selectedChatCompare;
   socket = io(ENDPOINT);
