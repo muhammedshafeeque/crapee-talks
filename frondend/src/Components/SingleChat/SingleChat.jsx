@@ -95,7 +95,6 @@ function SingleChat({ fetchAgain, setFetchAgain }) {
     }
   };
   useEffect(() => {
-    console.log(socketConnected)
     socket.emit("setup", user);
     socket.on("connection", () => {
       setSocketConnected(true);
@@ -113,9 +112,10 @@ function SingleChat({ fetchAgain, setFetchAgain }) {
         !selectedChatCompare ||
         selectedChatCompare._id !== newMessageRecieved.chat._id
       ) {
+        
       } else {
         
-        setMessages([ newMessageRecieved, ...messages]);
+        setMessages(messages=>[...messages,newMessageRecieved]);
         
       }
 
