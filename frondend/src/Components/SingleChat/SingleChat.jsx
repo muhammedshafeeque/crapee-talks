@@ -95,7 +95,7 @@ function SingleChat({ fetchAgain, setFetchAgain }) {
     }
   };
   useEffect(() => {
-    
+    console.log(socketConnected)
     socket.emit("setup", user);
     socket.on("connection", () => {
       setSocketConnected(true);

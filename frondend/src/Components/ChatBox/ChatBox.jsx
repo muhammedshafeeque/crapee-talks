@@ -5,7 +5,7 @@ import SingleChat from '../SingleChat/SingleChat'
 
 function ChatBox({fetchAgain,setFetchAgain}) {
 
-  const {user,selectedChat} =ChatState()
+  const {selectedChat} =ChatState()
   return (
     <Box d={{ base: selectedChat ? "flex" : "none", md: "flex" }}
     alignItems="center"

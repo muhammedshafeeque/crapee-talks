@@ -92,7 +92,7 @@ function Login() {
             }}
           />
           <InputRightElement width={"4.5rem"}>
-            <Button h="1.75rem " size={"sm"} onClick={handleClick}>
+            <Button h="1.75rem " size={"sm"} isLoading={loading} onClick={handleClick}>
               {show ? "Hide" : "Show"}
             </Button>
           </InputRightElement>
@@ -107,7 +107,7 @@ function Login() {
       >
         Login
       </Button>
-      <Button
+      {/* <Button
       variant={'solid'}
         colorScheme={"red"}
         width="100%"
@@ -119,7 +119,7 @@ function Login() {
         }}
       >
         Get Guest user Creditionals
-      </Button>
+      </Button> */}
     </VStack>
   );
 }
